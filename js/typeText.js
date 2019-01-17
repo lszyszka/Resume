@@ -1,5 +1,5 @@
 const txt = "Łukasz Szyszka";
-const txtInner = "Front - End Developer";
+const txtInner = "Resume / Portfolio";
 const placeToText = document.querySelector('.title h1');
 const innerText = document.querySelector('.title h3');
 

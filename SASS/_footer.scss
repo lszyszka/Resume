@@ -45,23 +45,11 @@ footer {
 
 .wrap.active {
     .call {
-        i {
-            animation: fromLeft 1s linear;
-        }
-
-        .number {
-            animation: scaleFromZero 1s linear;
-        }
+        animation: scaleFromZero 1.5s linear;
     }
 
     .mail {
-        i {
-            animation: fromLeft 1s linear;
-        }
-
-        span {
-            animation: scaleFromZero 1s linear;
-        }
+        animation: scaleFromZero 1.5s linear;
     }
 
     .social {
@@ -72,31 +60,45 @@ footer {
     }
 
     .copyright {
-        i {
-            animation: fromLeft 1s linear;
-        }
-
-        span {
-            animation: scaleFromZero 1s linear;
-        }
+        animation: scaleFromZero 1.5s linear;
     }
 
 }
 
-@keyframes fromLeft {
-    0% {
-        transform: translateX(-100vw);
+@media (orientation:landscape) and (min-width:640px) {
+    .wrap {
+        justify-content: center;
+        align-items: center;
     }
+}
 
-    100% {
-        transform: translateX(0);
+@media (min-width:768px) {
+    footer {
+        i {
+            font-size: 36px;
+        }
+
+        div>div {
+            span {
+                font-size: 26px;
+                font-weight: normal;
+            }
+        }
     }
 }
 
 @keyframes scaleFromZero {
     0% {
-        transform: scale(0);
+        display: none;
+        opacity: 0;
     }
 
-    100% {}
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

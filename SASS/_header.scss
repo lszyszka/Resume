@@ -3,12 +3,12 @@ header {
     justify-content: space-between;
     overflow: hidden;
     // margin-bottom: 2rem;
-    height: 80px;
+    height: 100px;
 
     .title {
         margin-left: 1rem;
         margin-top: 1rem;
-        z-index: -1;
+
     }
 
     h1 {
@@ -40,7 +40,7 @@ header {
     width: 50px;
     height: 50px;
     text-align: center;
-    z-index: 1;
+    z-index: 2;
     transition: .5s;
 
 
@@ -112,20 +112,24 @@ nav {
     transition: .2s linear;
     position: fixed;
     opacity: 0;
+    overflow: hidden;
+    // display: none;
+
 
     .menu {
         position: fixed;
-        width: 100%;
-        height: 100%;
+        width: 0%;
+        height: 0%;
         background-color: rgba(42, 129, 255, 0.9);
-        display: block;
         text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         list-style: none;
-        font-size: 32px;
+        font-size: 0px;
+        // font-size: 32px;
+        z-index: -10;
 
         li {
             padding: 1rem 0;
@@ -157,4 +161,90 @@ nav.active {
     top: 0;
     left: 0;
     opacity: 1;
+    z-index: 1;
+
+    .menu {
+        transition: .2s;
+        width: 100%;
+        height: 100%;
+        font-size: 32px;
+    }
+
+    li {
+        animation: scale .5s linear;
+    }
+}
+
+@media (min-width:768px) {
+    header {
+
+
+        .title {
+            h1 {
+                font-size: 38px;
+            }
+
+            h3 {
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+@media (min-width:1024px) {
+    header {
+        justify-content: flex-start;
+
+        .title {
+            width: 30%;
+        }
+
+        nav {
+            display: none;
+        }
+
+        .burger-icon {
+            display: none;
+        }
+
+        .desktop-m {
+            width: 50%;
+            margin-left: 50px;
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                display: inline-block;
+                width: 18%;
+                text-align: center;
+                height: 80%;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+                margin-bottom: 20px;
+
+
+                a {
+                    text-decoration: none;
+                    color: #000;
+                    font-size: 20px;
+                    text-transform: uppercase;
+
+                }
+            }
+        }
+    }
+}
+
+@keyframes scale {
+    0% {
+        display: none;
+        transform: scale(0);
+    }
+
+    100% {
+        display: block;
+        transform: scale(1);
+    }
 }
