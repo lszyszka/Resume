@@ -1,0 +1,16 @@
+@import 'header';
+@import 'main';
+@import 'footer';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: helvetica, sans-serif;
+}
+
+body {
+    max-width: 1260px;
+    margin: 0 auto;
+    background-color: #EAE5E5;
+}
