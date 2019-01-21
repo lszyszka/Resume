@@ -50,7 +50,7 @@ header h3 {
   top: 50%;
   left: 50%;
   border-radius: 9px;
-  background-color: #F0F1F1;
+  background-color: black;
   width: 80%;
   height: 6px;
   -webkit-transform: translate(-50%, -50%);
@@ -181,6 +181,12 @@ nav.active li {
           animation: scale .5s linear;
 }
 
+@media (orientation: landscape) and (min-width: 600px) {
+  header .title {
+    margin: 30px 0 0 30px;
+  }
+}
+
 @media (min-width: 768px) {
   header .title h1 {
     font-size: 32px;
@@ -197,7 +203,11 @@ nav.active li {
             justify-content: flex-start;
   }
   header .title {
+    margin: 30px 0px 0px 50px;
     width: 30%;
+  }
+  header .title h1 {
+    font-size: 32px;
   }
   header nav {
     display: none;
@@ -207,7 +217,7 @@ nav.active li {
   }
   header .desktop-m {
     width: 50%;
-    margin-left: 50px;
+    margin-left: 20px;
     list-style-type: none;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -218,7 +228,7 @@ nav.active li {
   }
   header .desktop-m li {
     display: inline-block;
-    width: 18%;
+    width: 100%;
     text-align: center;
     height: 80%;
     display: -webkit-box;
@@ -236,7 +246,7 @@ nav.active li {
   header .desktop-m li a {
     text-decoration: none;
     color: #000;
-    font-size: 20px;
+    font-size: 16px;
     text-transform: uppercase;
   }
 }
@@ -275,7 +285,8 @@ nav.active li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 30px;
+  margin: 30px auto;
+  width: 90%;
 }
 
 .main .photo {
@@ -296,14 +307,13 @@ nav.active li {
 }
 
 .main .about h1 {
-  margin: 15px 15px 0px 15px;
+  margin: 15px 15px 0px 30px;
   font-size: 28px;
   letter-spacing: 2px;
-  text-align: center;
 }
 
 .main .about .buttons {
-  width: 85%;
+  width: 92%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -317,11 +327,11 @@ nav.active li {
 }
 
 .main .about .buttons div {
-  width: 27vw;
-  height: 27vw;
+  width: 24vw;
+  height: 24vw;
   border-radius: 50%;
   text-align: center;
-  line-height: 27vw;
+  line-height: 24vw;
   text-transform: uppercase;
   font-size: 14px;
   color: #fff;
@@ -345,7 +355,7 @@ nav.active li {
 .main .about .about-me {
   width: 85%;
   line-height: 26px;
-  margin: 30px auto 0px;
+  margin: 10px auto 0px;
 }
 
 @media (orientation: landscape) and (min-width: 640px) {
@@ -357,17 +367,21 @@ nav.active li {
     margin-top: 15px;
   }
   .main .photo {
-    margin-left: 15px;
+    margin-left: 0px;
     width: 40%;
     margin-top: 15px;
+  }
+  .main .photo img {
+    width: 231px;
+    height: 231px;
   }
   .main .about {
     width: 60%;
   }
   .main .about .buttons div {
-    width: 17vw;
-    height: 17vw;
-    line-height: 17vw;
+    width: 16vw;
+    height: 16vw;
+    line-height: 16vw;
   }
 }
 
@@ -381,7 +395,7 @@ nav.active li {
   }
   .main .photo {
     margin-left: 15px;
-    width: 30%;
+    width: unset;
     margin-top: 35px;
   }
   .main .about {
@@ -397,15 +411,10 @@ nav.active li {
   .main .about h1 {
     font-size: 32px;
   }
-  .main .about .buttons {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
-  }
   .main .about .buttons div {
-    width: 17vw;
-    height: 17vw;
-    line-height: 17vw;
+    width: 15vw;
+    height: 15vw;
+    line-height: 15vw;
     font-size: 16px;
   }
   .main .about p {
@@ -433,7 +442,8 @@ nav.active li {
             flex-direction: column;
   }
   .main .about h1 {
-    font-size: 34px;
+    font-size: 40px;
+    margin-left: 50px;
   }
   .main .about .buttons {
     -webkit-box-ordinal-group: 1;
@@ -445,7 +455,7 @@ nav.active li {
     width: 17vw;
     height: 17vw;
     line-height: 17vw;
-    font-size: 22px;
+    font-size: 18px;
   }
   .main .about p {
     font-size: 20px;
@@ -454,9 +464,9 @@ nav.active li {
 
 @media (min-width: 1400px) {
   .main .about .buttons div {
-    width: 25vh;
-    height: 25vh;
-    line-height: 25vh;
+    width: 22vh;
+    height: 22vh;
+    line-height: 22vh;
   }
 }
 
@@ -517,7 +527,8 @@ footer div > div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 25px;
+  padding-bottom: 12px;
+  padding-top: 12px;
 }
 
 footer div > div span {
@@ -568,17 +579,6 @@ footer i {
           animation: scaleFromZero 1.5s linear;
 }
 
-@media (orientation: landscape) and (min-width: 640px) {
-  .wrap {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
 @media (min-width: 768px) {
   footer i {
     font-size: 28px;
@@ -586,6 +586,20 @@ footer i {
   footer div > div span {
     font-size: 22px;
     font-weight: normal;
+  }
+}
+
+@media (min-width: 1023px) {
+  footer div > div span {
+    font-size: 18px;
+  }
+  footer .wrap {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
@@ -614,6 +628,278 @@ footer i {
   }
   100% {
     opacity: 1;
+  }
+}
+
+.resume-cv {
+  padding-top: 30px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.resume-cv h1 {
+  font-size: 28px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.resume-cv .cv-section .cv-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 32vw;
+  height: 32vw;
+  background-color: red;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.resume-cv .cv-section .cv-title span {
+  color: #fff;
+  margin-left: 8px;
+}
+
+.resume-cv .cv-section p {
+  margin-top: 15px;
+  line-height: 26px;
+}
+
+.resume-cv .cv-section hr {
+  margin-top: 20px;
+}
+
+.resume-cv .skills {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.resume-cv .skills .skill {
+  width: 45%;
+}
+
+.resume-cv .skills .skill span {
+  font-size: 32px;
+  color: red;
+  margin-left: 10px;
+}
+
+.resume-cv .skills .skill h3 {
+  margin-top: 10px;
+  letter-spacing: 2px;
+}
+
+.resume-cv .skills .skill hr {
+  margin-top: 10px;
+}
+
+.resume-cv .skills .skill ul {
+  margin-top: 10px;
+}
+
+.resume-cv .skills .skill ul li {
+  list-style-type: none;
+  padding: 3px 0px;
+  line-height: 26px;
+}
+
+@media (min-width: 768px) {
+  .resume-cv h1 {
+    font-size: 32px;
+  }
+  .resume-cv .cv-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .resume-cv .cv-section .cv-title {
+    width: 17vw;
+    height: 17vw;
+  }
+  .resume-cv .cv-section .cv-title span {
+    color: #fff;
+    margin-left: 8px;
+  }
+  .resume-cv .cv-section p {
+    font-size: 18px;
+    margin-left: 15px;
+    width: 77%;
+  }
+  .resume-cv .cv-section hr {
+    width: 100%;
+  }
+  .resume-cv .skills .skill {
+    text-align: center;
+  }
+  .resume-cv .skills .skill span {
+    margin-left: 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .resume-cv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .resume-cv .cv {
+    width: 70%;
+  }
+  .resume-cv h1 {
+    font-size: 40px;
+  }
+  .resume-cv .cv-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .resume-cv .cv-section .cv-title {
+    width: 150px;
+    height: 150px;
+  }
+  .resume-cv .cv-section .cv-title span {
+    font-size: 18px;
+  }
+  .resume-cv .cv-section p {
+    font-size: 20px;
+    width: 70%;
+  }
+  .resume-cv .skills {
+    padding-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 30%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+  .resume-cv .skills .skill {
+    margin-top: 38px;
+    text-align: left;
+  }
+  .resume-cv .skills .skill span {
+    font-size: 50px;
+    margin-left: 0;
+  }
+  .resume-cv .skills .skill h3 {
+    font-size: 24px;
+  }
+  .resume-cv .skills .skill hr {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .resume-cv .skills .skill ul li {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .resume-cv .cv-section .cv-title span {
+    font-size: 18px;
+  }
+  .resume-cv .cv-section p {
+    width: 64%;
+  }
+}
+
+@media (min-width: 1460px) {
+  .resume-cv .cv-section .cv-title {
+    width: 9vw;
+    height: 9vw;
+  }
+  .resume-cv .cv-section .cv-title span {
+    font-size: 18px;
+  }
+  .resume-cv .cv-section p {
+    width: 64%;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 480px) {
+  .resume-cv .cv-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .resume-cv .cv-section .cv-title {
+    width: 16vw;
+    height: 16vw;
+  }
+  .resume-cv .cv-section .cv-title span {
+    font-size: 14px;
+  }
+  .resume-cv .cv-section p {
+    font-size: 16px;
+    width: 74%;
+    margin-left: 20px;
+  }
+  .resume-cv .cv-section hr {
+    width: 100%;
+  }
+  .resume-cv .skills {
+    padding-top: 10px;
+  }
+  .resume-cv .skills .skill hr {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .resume-cv .skills .skill ul li {
+    font-size: 16px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+  .resume-cv .cv-section .cv-title span {
+    font-size: 20px;
+  }
+  .resume-cv .cv-section p {
+    width: 68%;
+    font-size: 20px;
   }
 }
 

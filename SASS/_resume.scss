@@ -1,0 +1,312 @@
+.resume-cv {
+    padding-top: 30px;
+    width: 90%;
+    margin: 0 auto;
+
+    h1 {
+        font-size: 28px;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    .cv-section {
+
+        .cv-title {
+            display: flex;
+            align-items: center;
+            width: 32vw;
+            height: 32vw;
+            background-color: red;
+            border-radius: 50%;
+            margin-top: 20px;
+
+            span {
+                color: #fff;
+                margin-left: 8px;
+            }
+        }
+
+        p {
+            margin-top: 15px;
+            line-height: 26px;
+        }
+
+        hr {
+            margin-top: 20px;
+        }
+    }
+
+    .skills {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .skill {
+            width: 45%;
+
+            span {
+                font-size: 32px;
+                color: red;
+                margin-left: 10px;
+            }
+
+            h3 {
+                margin-top: 10px;
+                letter-spacing: 2px;
+            }
+
+            hr {
+                margin-top: 10px;
+            }
+
+            ul {
+                margin-top: 10px;
+
+                li {
+                    list-style-type: none;
+                    padding: 3px 0px;
+                    line-height: 26px;
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width: 768px) {
+    .resume-cv {
+
+        h1 {
+            font-size: 32px;
+        }
+
+        .cv-section {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .cv-title {
+                width: 17vw;
+                height: 17vw;
+
+                span {
+                    color: #fff;
+                    margin-left: 8px;
+                }
+            }
+
+            p {
+                font-size: 18px;
+                margin-left: 15px;
+                width: 77%;
+            }
+
+            hr {
+                width: 100%;
+            }
+        }
+
+        .skills {
+
+            .skill {
+                text-align: center;
+
+                span {
+                    margin-left: 0px;
+                }
+
+
+            }
+        }
+    }
+
+}
+
+@media (min-width:1024px) {
+    .resume-cv {
+        display: flex;
+
+        .cv {
+            width: 70%;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        .cv-section {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .cv-title {
+                width: 150px;
+                height: 150px;
+
+                span {
+                    font-size: 18px;
+                }
+            }
+
+            p {
+                font-size: 20px;
+                width: 70%;
+            }
+        }
+
+        .skills {
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            align-items: center;
+            justify-content: unset;
+
+            .skill {
+                margin-top: 38px;
+                text-align: left;
+
+                span {
+                    font-size: 50px;
+                    margin-left: 0;
+                }
+
+                h3 {
+
+                    font-size: 24px;
+                }
+
+                hr {
+                    margin-top: 10px;
+                    width: 100%;
+                }
+
+                ul {
+
+
+                    li {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (min-width:1200px) {
+    .resume-cv {
+
+        .cv-section {
+            .cv-title {
+                span {
+                    font-size: 18px;
+                }
+            }
+
+            p {
+
+                width: 64%;
+            }
+        }
+
+    }
+}
+
+@media (min-width:1460px) {
+    .resume-cv {
+
+        .cv-section {
+
+
+            .cv-title {
+                width: 9vw;
+                height: 9vw;
+
+                span {
+                    font-size: 18px;
+                }
+            }
+
+            p {
+
+                width: 64%;
+            }
+        }
+
+    }
+}
+
+@media (orientation:landscape) and (min-width:480px) {
+    .resume-cv {
+
+        .cv-section {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .cv-title {
+                width: 16vw;
+                height: 16vw;
+
+                span {
+                    font-size: 14px;
+                }
+            }
+
+            p {
+                font-size: 16px;
+                width: 74%;
+                margin-left: 20px;
+            }
+
+            hr {
+                width: 100%;
+            }
+        }
+
+        .skills {
+            padding-top: 10px;
+
+
+            .skill {
+                hr {
+                    margin-top: 10px;
+                    width: 100%;
+                }
+
+                ul {
+                    li {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (orientation:landscape) and (min-width:1024px) {
+    .resume-cv {
+
+        .cv-section {
+
+            .cv-title {
+                span {
+                    font-size: 20px;
+                }
+            }
+
+            p {
+                width: 68%;
+                font-size: 20px;
+            }
+        }
+
+
+    }
+}

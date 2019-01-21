@@ -1,7 +1,8 @@
 .main {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin: 30px auto;
+    width: 90%;
 
     .photo {
         margin: 0 auto;
@@ -24,25 +25,25 @@
 
     .about {
         h1 {
-            margin: 15px 15px 0px 15px;
+            margin: 15px 15px 0px 30px;
             font-size: 28px;
             letter-spacing: 2px;
-            text-align: center;
+
         }
 
         .buttons {
-            width: 85%;
+            width: 92%;
             display: flex;
             flex-direction: row;
             justify-content: space-around;
             margin: 20px 20px 0px 20px;
 
             div {
-                width: 27vw;
-                height: 27vw;
+                width: 24vw;
+                height: 24vw;
                 border-radius: 50%;
                 text-align: center;
-                line-height: 27vw;
+                line-height: 24vw;
                 text-transform: uppercase;
                 font-size: 14px;
                 color: #fff;
@@ -66,7 +67,7 @@
         .about-me {
             width: 85%;
             line-height: 26px;
-            margin: 30px auto 0px;
+            margin: 10px auto 0px;
         }
     }
 
@@ -79,9 +80,14 @@
         margin-top: 15px;
 
         .photo {
-            margin-left: 15px;
+            margin-left: 0px;
             width: 40%;
             margin-top: 15px;
+
+            img {
+                width: 231px;
+                height: 231px;
+            }
         }
 
         .about {
@@ -89,9 +95,9 @@
 
             .buttons {
                 div {
-                    width: 17vw;
-                    height: 17vw;
-                    line-height: 17vw;
+                    width: 16vw;
+                    height: 16vw;
+                    line-height: 16vw;
                 }
             }
         }
@@ -105,7 +111,7 @@
 
         .photo {
             margin-left: 15px;
-            width: 30%;
+            width: unset;
             margin-top: 35px;
         }
 
@@ -119,12 +125,12 @@
             }
 
             .buttons {
-                order: -1;
+
 
                 div {
-                    width: 17vw;
-                    height: 17vw;
-                    line-height: 17vw;
+                    width: 15vw;
+                    height: 15vw;
+                    line-height: 15vw;
                     font-size: 16px;
                 }
             }
@@ -157,7 +163,8 @@
 
             h1 {
 
-                font-size: 34px;
+                font-size: 40px;
+                margin-left: 50px;
             }
 
             .buttons {
@@ -168,7 +175,7 @@
                     width: 17vw;
                     height: 17vw;
                     line-height: 17vw;
-                    font-size: 22px;
+                    font-size: 18px;
                 }
             }
 
@@ -184,9 +191,9 @@
         .about {
             .buttons {
                 div {
-                    width: 25vh;
-                    height: 25vh;
-                    line-height: 25vh;
+                    width: 22vh;
+                    height: 22vh;
+                    line-height: 22vh;
                 }
             }
         }
