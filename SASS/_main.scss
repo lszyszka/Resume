@@ -110,9 +110,10 @@
         margin-top: 30px;
 
         .photo {
-            margin-left: 15px;
+            // margin-left: 15px;
             width: unset;
             margin-top: 35px;
+            margin-left: 0px;
         }
 
         .about {
@@ -169,7 +170,7 @@
 
             .buttons {
                 order: 0;
-                margin: 25px 50px;
+                margin: 25px 20px;
 
                 div {
                     width: 17vw;
@@ -179,7 +180,8 @@
                 }
             }
 
-            p {
+            .about-me {
+                width: 80%;
                 font-size: 20px;
             }
         }

@@ -153,7 +153,7 @@
 
             p {
                 font-size: 20px;
-                width: 70%;
+                width: 65%;
             }
         }
 
@@ -302,11 +302,23 @@
             }
 
             p {
-                width: 68%;
+                width: 65%;
                 font-size: 20px;
             }
         }
 
 
+    }
+}
+
+@media (min-width:1600px) {
+    .resume-cv {
+
+        .cv-section {
+            p {
+                width: 58%;
+
+            }
+        }
     }
 }

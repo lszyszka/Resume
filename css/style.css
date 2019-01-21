@@ -394,9 +394,9 @@ nav.active li {
     margin-top: 30px;
   }
   .main .photo {
-    margin-left: 15px;
     width: unset;
     margin-top: 35px;
+    margin-left: 0px;
   }
   .main .about {
     width: 70%;
@@ -449,7 +449,7 @@ nav.active li {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
-    margin: 25px 50px;
+    margin: 25px 20px;
   }
   .main .about .buttons div {
     width: 17vw;
@@ -457,7 +457,8 @@ nav.active li {
     line-height: 17vw;
     font-size: 18px;
   }
-  .main .about p {
+  .main .about .about-me {
+    width: 80%;
     font-size: 20px;
   }
 }
@@ -790,7 +791,7 @@ footer i {
   }
   .resume-cv .cv-section p {
     font-size: 20px;
-    width: 70%;
+    width: 65%;
   }
   .resume-cv .skills {
     padding-top: 20px;
@@ -898,8 +899,14 @@ footer i {
     font-size: 20px;
   }
   .resume-cv .cv-section p {
-    width: 68%;
+    width: 65%;
     font-size: 20px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .resume-cv .cv-section p {
+    width: 58%;
   }
 }
 
