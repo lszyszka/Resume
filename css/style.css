@@ -323,7 +323,7 @@ nav.active li {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin: 20px 20px 0px 20px;
+  margin: 20px 20px 0px 0px;
 }
 
 .main .about .buttons div {
@@ -353,7 +353,7 @@ nav.active li {
 }
 
 .main .about .about-me {
-  width: 85%;
+  width: 100%;
   line-height: 26px;
   margin: 10px auto 0px;
 }
