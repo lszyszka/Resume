@@ -418,7 +418,7 @@ nav.active li {
     font-size: 16px;
   }
   .main .about p {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -452,9 +452,9 @@ nav.active li {
     margin: 25px 0px;
   }
   .main .about .buttons div {
-    width: 17vw;
-    height: 17vw;
-    line-height: 17vw;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
     font-size: 18px;
   }
   .main .about .about-me {
@@ -465,9 +465,9 @@ nav.active li {
 
 @media (min-width: 1400px) {
   .main .about .buttons div {
-    width: 22vh;
-    height: 22vh;
-    line-height: 22vh;
+    width: 17vh;
+    height: 17vh;
+    line-height: 17vh;
   }
 }
 
@@ -868,8 +868,8 @@ footer i {
         flex-wrap: wrap;
   }
   .resume-cv .cv-section .cv-title {
-    width: 22vh;
-    height: 22vh;
+    width: 25vh;
+    height: 25vh;
   }
   .resume-cv .cv-section .cv-title span {
     font-size: 14px;
@@ -895,6 +895,10 @@ footer i {
 }
 
 @media (orientation: landscape) and (min-width: 1024px) {
+  .resume-cv .cv-section .cv-title {
+    width: 150px;
+    height: 150px;
+  }
   .resume-cv .cv-section .cv-title span {
     font-size: 20px;
   }
@@ -984,8 +988,8 @@ footer i {
         flex-wrap: wrap;
   }
   .projects-section .project-desc .project-title {
-    width: 17vw;
-    height: 17vw;
+    width: 150px;
+    height: 150px;
   }
   .projects-section .project-desc h4 {
     display: none;
@@ -1077,6 +1081,62 @@ footer i {
     margin-bottom: 15px;
     line-height: 26px;
     font-size: 20px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 480px) {
+  .projects-section .project-desc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 30px;
+  }
+  .projects-section .project-desc .project-title {
+    text-align: center;
+    width: 25vh;
+    height: 25vh;
+  }
+  .projects-section .project-desc h4 {
+    display: none;
+    margin: 15px 0px;
+  }
+  .projects-section .project-desc p {
+    width: 80%;
+    margin-left: 30px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .projects-section .project-desc hr {
+    display: none;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+  .projects-section .project-desc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 0px;
+  }
+  .projects-section .project-desc .project-title {
+    text-align: center;
+    width: 17vh;
+    height: 17vh;
+  }
+  .projects-section .project-desc h4 {
+    display: none;
+    margin: 15px 0px;
+  }
+  .projects-section .project-desc p {
+    width: 91%;
+    margin-left: 0px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .projects-section .project-desc hr {
+    display: none;
   }
 }
 
