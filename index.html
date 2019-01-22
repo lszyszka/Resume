@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
         crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noticia+Text:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <header>
+    <header id="home">
         <div class="title">
             <h1></h1>
             <h3></h3>
@@ -25,31 +27,31 @@
         </div>
 
         <ul class="desktop-m">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Resume</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contacts</a></li>
+            <li><a data-id="home" href="#">Home</a></li>
+            <li><a data-id="resume-cv" href="#">Resume</a></li>
+            <li><a data-id="projects-section" href="#">Projects</a></li>
+            <li><a data-id="contact-anchor" href="#">Contacts</a></li>
         </ul>
 
         <nav class="">
             <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Resume</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contacts</a></li>
+                <li><a data-id="home" href="#">Home</a></li>
+                <li><a data-id="resume-cv" href="#">Resume</a></li>
+                <li><a data-id="projects-section" href="#">Projects</a></li>
+                <li><a data-id="contact-anchor" href="#">Contacts</a></li>
             </ul>
         </nav>
     </header>
-    <section class="main">
+    <section id="main" class="main">
         <div class="photo">
             <img src="./images/daniel-korpai-1156463-unsplash.jpg" alt="about-photo">
         </div>
         <div class="about">
             <h1>About me:</h1>
             <div class="buttons">
-                <div class="resume">resume</div>
-                <div class="projects">projects</div>
-                <div class="skills">skills</div>
+                <div class="resume" data-id="resume-cv">resume</div>
+                <div class="projects" data-id="projects-section">projects</div>
+                <div class="skills" data-id="contact-anchor">Contact</div>
             </div>
             <p class="about-me">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam rem exercitationem
                 repellendus atque quas, itaque alias iure eius voluptatum cumque fugit iste aliquam voluptates
@@ -58,7 +60,7 @@
                 adipisicing elit. </p>
         </div>
     </section>
-    <section class="resume-cv">
+    <section id="resume-cv" class="resume-cv">
         <div class="cv">
             <h1>Resume</h1>
             <hr>
@@ -108,7 +110,7 @@
             </div>
         </div>
     </section>
-    <section class="projects-section">
+    <section id="projects-section" class="projects-section">
         <h1>Latest Projects</h1>
         <hr>
         <div class="one-project">
@@ -155,7 +157,7 @@
             </div>
         </div>
     </section>
-    <section class="contact">
+    <section id="contact-anchor" class="contact">
         <div class="social">
             <h1>Contact</h1>
             <hr>
@@ -201,6 +203,7 @@
     <script src="./js/burger-menu.js"></script>
     <script src="./js/typeText.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/scrollPage.js"></script>
 </body>
 
 </html>

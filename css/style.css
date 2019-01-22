@@ -6,7 +6,7 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   overflow: hidden;
-  height: 100px;
+  height: 120px;
 }
 
 header .title {
@@ -226,6 +226,9 @@ nav.active li {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  header .desktop-m:hover li > a {
+    opacity: 0.2;
+  }
   header .desktop-m li {
     display: inline-block;
     width: 100%;
@@ -243,11 +246,16 @@ nav.active li {
             align-items: flex-end;
     margin-bottom: 20px;
   }
+  header .desktop-m li:hover > a {
+    color: red;
+    opacity: 1;
+  }
   header .desktop-m li a {
     text-decoration: none;
     color: #000;
     font-size: 16px;
     text-transform: uppercase;
+    margin: 0 auto;
   }
 }
 
@@ -338,6 +346,7 @@ nav.active li {
   font-weight: bold;
   -webkit-animation: circle 1.5s linear;
           animation: circle 1.5s linear;
+  cursor: pointer;
 }
 
 .main .about .buttons .resume {
@@ -1333,7 +1342,7 @@ footer i {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: helvetica, sans-serif;
+  font-family: 'Noticia Text', serif;
 }
 
 body {
