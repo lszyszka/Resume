@@ -11,7 +11,7 @@
         margin-top: 20px;
         display: flex;
         justify-content: center;
-
+        transform: translateX(0%);
 
         img {
             width: 100%;
@@ -36,6 +36,7 @@
     }
 
     .project-desc {
+        transform: translateX(0%);
 
         .project-title {
             display: flex;

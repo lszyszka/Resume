@@ -942,6 +942,8 @@ footer i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 .projects-section .projects-image img {
@@ -964,6 +966,11 @@ footer i {
 .projects-section .one-project.active:nth-of-type(3) .projects-image {
   -webkit-animation: fromLeft 1s linear;
           animation: fromLeft 1s linear;
+}
+
+.projects-section .project-desc {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 .projects-section .project-desc .project-title {
