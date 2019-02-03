@@ -233,7 +233,7 @@ nav.active li {
     display: inline-block;
     width: 100%;
     text-align: center;
-    height: 80%;
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -256,6 +256,7 @@ nav.active li {
     font-size: 16px;
     text-transform: uppercase;
     margin: 0 auto;
+    font-size: 20px;
   }
 }
 
@@ -350,15 +351,15 @@ nav.active li {
 }
 
 .main .about .buttons .resume {
-  background-color: #E83556;
+  background-color: #BC4B51;
 }
 
 .main .about .buttons .projects {
-  background-color: #61D0D4;
+  background-color: #BC4B51;
 }
 
 .main .about .buttons .skills {
-  background-color: #D1C926;
+  background-color: #BC4B51;
 }
 
 .main .about .about-me {
@@ -511,7 +512,7 @@ nav.active li {
 }
 
 footer {
-  background-color: #E83556;
+  background-color: transparent;
   margin-top: 30px;
   padding: 25px 30px;
 }
@@ -542,7 +543,7 @@ footer div > div {
 }
 
 footer div > div span {
-  color: #fff;
+  color: #BC4B51;
 }
 
 footer div > div span {
@@ -552,7 +553,7 @@ footer div > div span {
 
 footer div > div span a {
   text-decoration: none;
-  color: #fff;
+  color: #BC4B51;
   cursor: pointer;
 }
 
@@ -662,7 +663,7 @@ footer i {
           align-items: center;
   width: 25vw;
   height: 25vw;
-  background-color: red;
+  background-color: #BC4B51;
   border-radius: 50%;
   margin-top: 20px;
 }
@@ -700,7 +701,7 @@ footer i {
 
 .resume-cv .skills .skill span {
   font-size: 32px;
-  color: red;
+  color: #5F9EA0;
   margin-left: 10px;
 }
 
@@ -950,6 +951,21 @@ footer i {
   opacity: 0.8;
 }
 
+.projects-section .one-project.active:nth-of-type(1) .projects-image {
+  -webkit-animation: fromLeft 1s linear;
+          animation: fromLeft 1s linear;
+}
+
+.projects-section .one-project.active:nth-of-type(2) .projects-image {
+  -webkit-animation: fromRight 1s linear;
+          animation: fromRight 1s linear;
+}
+
+.projects-section .one-project.active:nth-of-type(3) .projects-image {
+  -webkit-animation: fromLeft 1s linear;
+          animation: fromLeft 1s linear;
+}
+
 .projects-section .project-desc .project-title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -975,6 +991,21 @@ footer i {
 .projects-section .project-desc p {
   margin-bottom: 15px;
   line-height: 26px;
+}
+
+.projects-section .one-project.active:nth-of-type(1) .project-desc {
+  -webkit-animation: fromRight 1s linear;
+          animation: fromRight 1s linear;
+}
+
+.projects-section .one-project.active:nth-of-type(2) .project-desc {
+  -webkit-animation: fromLeft 1s linear;
+          animation: fromLeft 1s linear;
+}
+
+.projects-section .one-project.active:nth-of-type(3) .project-desc {
+  -webkit-animation: fromRight 1s linear;
+          animation: fromRight 1s linear;
 }
 
 @media (max-width: 340px) {
@@ -1149,6 +1180,50 @@ footer i {
   }
 }
 
+@-webkit-keyframes fromLeft {
+  0% {
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes fromLeft {
+  0% {
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes fromRight {
+  0% {
+    -webkit-transform: translateX(150%);
+            transform: translateX(150%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes fromRight {
+  0% {
+    -webkit-transform: translateX(150%);
+            transform: translateX(150%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
 .contact {
   width: 90%;
   margin: 0 auto;
@@ -1196,11 +1271,12 @@ footer i {
   width: 50px;
   height: 50px;
   line-height: 50px;
-  background-color: cadetblue;
+  background-color: #BC4B51;
   display: inline-block;
   border-radius: 50%;
   text-align: center;
   font-size: 32px;
+  color: #F4FFFF;
 }
 
 .contact .social-icon img {
@@ -1217,28 +1293,35 @@ footer i {
           flex-direction: column;
 }
 
+.contact .form form textarea {
+  resize: none;
+  padding: 10px 10px;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
 .contact .form form input {
-  padding: 10px 0;
+  padding: 10px 10px;
   margin: 10px 0;
 }
 
 .contact .form form input::-webkit-input-placeholder {
-  padding-left: 10px;
+  padding-left: 0px;
   font-size: 16px;
 }
 
 .contact .form form input:-ms-input-placeholder {
-  padding-left: 10px;
+  padding-left: 0px;
   font-size: 16px;
 }
 
 .contact .form form input::-ms-input-placeholder {
-  padding-left: 10px;
+  padding-left: 0px;
   font-size: 16px;
 }
 
 .contact .form form input::placeholder {
-  padding-left: 10px;
+  padding-left: 0px;
   font-size: 16px;
 }
 
@@ -1294,6 +1377,30 @@ footer i {
     width: 60%;
     padding-top: 60px;
   }
+  .contact .form form textarea {
+    padding: 20px 10px;
+    font-size: 16px;
+  }
+  .contact .form form input {
+    padding: 20px 10px;
+    font-size: 16px;
+  }
+  .contact .form form input::-webkit-input-placeholder {
+    padding-left: 0px;
+    font-size: 16px;
+  }
+  .contact .form form input:-ms-input-placeholder {
+    padding-left: 0px;
+    font-size: 16px;
+  }
+  .contact .form form input::-ms-input-placeholder {
+    padding-left: 0px;
+    font-size: 16px;
+  }
+  .contact .form form input::placeholder {
+    padding-left: 0px;
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 1366px) {
@@ -1312,25 +1419,29 @@ footer i {
     line-height: 90px;
     font-size: 40px;
   }
+  .contact .form form textarea {
+    padding: 20px 10px;
+    font-size: 22px;
+  }
   .contact .form form input {
-    padding: 20px 0;
-    margin: 10px 0;
+    padding: 20px 10px;
+    font-size: 22px;
   }
   .contact .form form input::-webkit-input-placeholder {
-    padding-left: 10px;
-    font-size: 20px;
+    padding-left: 0px;
+    font-size: 24px;
   }
   .contact .form form input:-ms-input-placeholder {
-    padding-left: 10px;
-    font-size: 20px;
+    padding-left: 0px;
+    font-size: 24px;
   }
   .contact .form form input::-ms-input-placeholder {
-    padding-left: 10px;
-    font-size: 20px;
+    padding-left: 0px;
+    font-size: 24px;
   }
   .contact .form form input::placeholder {
-    padding-left: 10px;
-    font-size: 20px;
+    padding-left: 0px;
+    font-size: 24px;
   }
   .contact .form form input[type=submit] {
     font-size: 22px;
@@ -1348,7 +1459,12 @@ footer i {
 body {
   max-width: 1260px;
   margin: 0 auto;
-  background-color: #EEEEEE;
+  background-color: #ddd;
+  color: #000;
+}
+
+h1 {
+  color: #191D2B;
 }
 
 @media (max-width: 1023px) {

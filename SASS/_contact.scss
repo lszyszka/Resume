@@ -30,11 +30,12 @@
             width: 50px;
             height: 50px;
             line-height: 50px;
-            background-color: cadetblue;
+            background-color: #BC4B51;
             display: inline-block;
             border-radius: 50%;
             text-align: center;
             font-size: 32px;
+            color: #F4FFFF;
         }
 
         img {
@@ -47,12 +48,19 @@
             display: flex;
             flex-direction: column;
 
+            textarea {
+                resize: none;
+                padding: 10px 10px;
+                margin: 10px 0;
+                font-size: 16px;
+            }
+
             input {
-                padding: 10px 0;
+                padding: 10px 10px;
                 margin: 10px 0;
 
                 &::placeholder {
-                    padding-left: 10px;
+                    padding-left: 0px;
                     font-size: 16px;
                 }
 
@@ -113,6 +121,28 @@
             padding-left: 30px;
             width: 60%;
             padding-top: 60px;
+
+
+            form {
+
+                textarea {
+                    padding: 20px 10px;
+                    font-size: 16px;
+
+
+                }
+
+                input {
+                    padding: 20px 10px;
+
+                    font-size: 16px;
+
+                    &::placeholder {
+                        padding-left: 0px;
+                        font-size: 16px;
+                    }
+                }
+            }
         }
 
     }
@@ -137,13 +167,20 @@
 
         .form {
             form {
+
+                textarea {
+                    padding: 20px 10px;
+                    font-size: 22px;
+                }
+
                 input {
-                    padding: 20px 0;
-                    margin: 10px 0;
+                    padding: 20px 10px;
+
+                    font-size: 22px;
 
                     &::placeholder {
-                        padding-left: 10px;
-                        font-size: 20px;
+                        padding-left: 0px;
+                        font-size: 24px;
                     }
 
                     &[type=submit] {

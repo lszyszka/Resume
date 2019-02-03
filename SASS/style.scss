@@ -15,7 +15,12 @@
 body {
     max-width: 1260px;
     margin: 0 auto;
-    background-color: #EEEEEE;
+    background-color: #ddd;
+    color: #000;
+}
+
+h1 {
+    color: #191D2B;
 }
 
 @media (max-width:1023px) {
