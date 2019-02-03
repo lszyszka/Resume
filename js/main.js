@@ -19,13 +19,13 @@ window.addEventListener('scroll', function () {
     let firstDivProject = projectDiv[0].offsetTop;
     let secondDivProject = projectDiv[1].offsetTop;
     let thirdDivProject = projectDiv[2].offsetTop;
-    if (scrollPosition > firstDivProject - window.innerHeight) {
+    if (scrollPosition > firstDivProject - window.innerHeight + 150) {
         projectDiv[0].classList.add('active');
     }
-    if (scrollPosition > secondDivProject - window.innerHeight) {
+    if (scrollPosition > secondDivProject - window.innerHeight + 150) {
         projectDiv[1].classList.add('active');
     }
-    if (scrollPosition > thirdDivProject - window.innerHeight) {
+    if (scrollPosition > thirdDivProject - window.innerHeight + 150) {
         projectDiv[2].classList.add('active');
     }
     // let secondDivProject = projectDiv[1].offsetTop;
