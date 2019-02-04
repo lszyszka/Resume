@@ -11,13 +11,15 @@
     box-sizing: border-box;
     font-family: 'Noticia Text', serif;
 
+
 }
 
 body {
     max-width: 1260px;
     margin: 0 auto;
-    background-color: #ddd;
+    background-color: rgba(221, 221, 221, 0.1);
     color: #000;
+    overflow-x: hidden;
 }
 
 h1 {

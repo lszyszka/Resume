@@ -40,6 +40,7 @@ header {
     text-align: center;
     z-index: 2;
     transition: .5s;
+    cursor: pointer;
 
 
     span {
@@ -124,12 +125,12 @@ nav {
         align-items: center;
         list-style: none;
         font-size: 0px;
-        // font-size: 32px;
         z-index: -10;
 
         li {
             padding: 1rem 0;
             width: 80%;
+            cursor: pointer;
 
         }
 
@@ -240,14 +241,21 @@ nav.active {
                 flex-direction: row;
                 align-items: flex-end;
                 margin-bottom: 20px;
+                transform: translateY(-100vh);
+                transition: 1s;
+
+                &.active {
+                    transform: translateY(0vw);
+                }
 
 
 
 
 
                 &:hover>a {
-                    color: red;
+                    color: #BC4B51;
                     opacity: 1;
+                    transform: scale(1.2);
                 }
 
                 a {

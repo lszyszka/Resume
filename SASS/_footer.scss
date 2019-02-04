@@ -16,13 +16,17 @@ footer {
         padding-bottom: 12px;
         padding-top: 12px;
 
+
         span {
             color: #BC4B51;
+
         }
 
         span {
             margin-left: 25px;
             font-size: 18px;
+            font-weight: bold;
+
         }
 
         span a {
@@ -38,7 +42,7 @@ footer {
     }
 
     i {
-        color: black;
+        color: #010;
         font-size: 32px;
     }
 }
@@ -77,7 +81,7 @@ footer {
         div>div {
             span {
                 font-size: 22px;
-                font-weight: normal;
+                font-weight: bold;
             }
         }
     }
@@ -87,6 +91,7 @@ footer {
     footer {
         div>div span {
             font-size: 18px;
+            font-weight: bold;
         }
 
         .wrap {

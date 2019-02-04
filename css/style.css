@@ -43,6 +43,7 @@ header h3 {
   z-index: 2;
   -webkit-transition: .5s;
   transition: .5s;
+  cursor: pointer;
 }
 
 .burger-icon span {
@@ -141,6 +142,7 @@ nav .menu {
 nav .menu li {
   padding: 1rem 0;
   width: 80%;
+  cursor: pointer;
 }
 
 nav .menu li:first-child {
@@ -245,10 +247,20 @@ nav.active li {
         -ms-flex-align: end;
             align-items: flex-end;
     margin-bottom: 20px;
+    -webkit-transform: translateY(-100vh);
+            transform: translateY(-100vh);
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  header .desktop-m li.active {
+    -webkit-transform: translateY(0vw);
+            transform: translateY(0vw);
   }
   header .desktop-m li:hover > a {
-    color: red;
+    color: #BC4B51;
     opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
   header .desktop-m li a {
     text-decoration: none;
@@ -348,10 +360,24 @@ nav.active li {
   -webkit-animation: circle 1.5s linear;
           animation: circle 1.5s linear;
   cursor: pointer;
+  -webkit-transition: .8s;
+  transition: .8s;
+}
+
+.main .about .buttons div:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 .main .about .buttons .resume {
   background-color: #BC4B51;
+  -webkit-transition: .8s;
+  transition: .8s;
+}
+
+.main .about .buttons .resume:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 .main .about .buttons .projects {
@@ -549,6 +575,7 @@ footer div > div span {
 footer div > div span {
   margin-left: 25px;
   font-size: 18px;
+  font-weight: bold;
 }
 
 footer div > div span a {
@@ -566,7 +593,7 @@ footer .social {
 }
 
 footer i {
-  color: black;
+  color: #010;
   font-size: 32px;
 }
 
@@ -596,13 +623,14 @@ footer i {
   }
   footer div > div span {
     font-size: 22px;
-    font-weight: normal;
+    font-weight: bold;
   }
 }
 
 @media (min-width: 1023px) {
   footer div > div span {
     font-size: 18px;
+    font-weight: bold;
   }
   footer .wrap {
     -webkit-box-orient: horizontal;
@@ -928,6 +956,7 @@ footer i {
   width: 90%;
   margin: 0 auto;
   margin-top: 20px;
+  overflow-x: hidden;
 }
 
 .projects-section h1 {
@@ -942,6 +971,8 @@ footer i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: .7s;
+  transition: .7s;
 }
 
 .projects-section .projects-image img {
@@ -949,6 +980,39 @@ footer i {
   height: 100%;
   border-radius: 15px;
   opacity: 0.8;
+}
+
+.projects-section .one-project:nth-of-type(1) .projects-image,
+.projects-section .one-project:nth-of-type(3) .projects-image,
+.projects-section .one-project:nth-of-type(2) .project-desc {
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+}
+
+.projects-section .one-project:nth-of-type(1) .project-desc,
+.projects-section .one-project:nth-of-type(3) .project-desc,
+.projects-section .one-project:nth-of-type(2) .projects-image {
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw);
+}
+
+.projects-section .one-project:nth-of-type(1).active .projects-image,
+.projects-section .one-project:nth-of-type(3).active .projects-image,
+.projects-section .one-project:nth-of-type(2).active .project-desc {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.projects-section .one-project:nth-of-type(1).active .project-desc,
+.projects-section .one-project:nth-of-type(3).active .project-desc,
+.projects-section .one-project:nth-of-type(2).active .projects-image {
+  -webkit-transform: translateX(0vw);
+          transform: translateX(0vw);
+}
+
+.projects-section .project-desc {
+  -webkit-transition: .7s;
+  transition: .7s;
 }
 
 .projects-section .project-desc .project-title {
@@ -1224,11 +1288,18 @@ footer i {
   padding: 10px 10px;
   margin: 10px 0;
   font-size: 16px;
+  border: 2px solid #5F9EA0;
+}
+
+.contact .form form textarea:focus {
+  outline: none !important;
+  border: 2px solid #BC4B51;
 }
 
 .contact .form form input {
   padding: 10px 10px;
   margin: 10px 0;
+  border: 2px solid #5F9EA0;
 }
 
 .contact .form form input::-webkit-input-placeholder {
@@ -1251,17 +1322,34 @@ footer i {
   font-size: 16px;
 }
 
+.contact .form form input:focus {
+  outline: none !important;
+  border: 2px solid #BC4B51;
+}
+
 .contact .form form input[type=submit] {
   width: 30%;
   margin-left: calc(100% - 30%);
   background-color: transparent;
   border-style: none;
-  color: cadetblue;
-  border: 1px solid black;
+  color: #BC4B51;
+  border: 3px solid #5F9EA0;
+  border-radius: 9px;
   text-transform: uppercase;
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 2px;
+}
+
+.contact .form form input[type=submit].active {
+  -webkit-animation: shake 1s;
+          animation: shake 1s;
+}
+
+.contact .form form input[type=submit]:hover {
+  background-color: #fff;
+  border-color: #BC4B51;
+  color: #BC4B51;
 }
 
 @media (min-width: 768px) {
@@ -1374,6 +1462,100 @@ footer i {
   }
 }
 
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: translate(1px, 1px) rotate(0deg);
+            transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    -webkit-transform: translate(-1px, -2px) rotate(-5deg);
+            transform: translate(-1px, -2px) rotate(-5deg);
+  }
+  20% {
+    -webkit-transform: translate(-3px, 0px) rotate(5deg);
+            transform: translate(-3px, 0px) rotate(5deg);
+  }
+  30% {
+    -webkit-transform: translate(3px, 2px) rotate(0deg);
+            transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    -webkit-transform: translate(1px, -1px) rotate(5deg);
+            transform: translate(1px, -1px) rotate(5deg);
+  }
+  50% {
+    -webkit-transform: translate(-1px, 2px) rotate(-5deg);
+            transform: translate(-1px, 2px) rotate(-5deg);
+  }
+  60% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+            transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    -webkit-transform: translate(3px, 1px) rotate(-5deg);
+            transform: translate(3px, 1px) rotate(-5deg);
+  }
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(5deg);
+            transform: translate(-1px, -1px) rotate(5deg);
+  }
+  90% {
+    -webkit-transform: translate(1px, 2px) rotate(0deg);
+            transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(1px, -2px) rotate(-5deg);
+            transform: translate(1px, -2px) rotate(-5deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    -webkit-transform: translate(1px, 1px) rotate(0deg);
+            transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    -webkit-transform: translate(-1px, -2px) rotate(-5deg);
+            transform: translate(-1px, -2px) rotate(-5deg);
+  }
+  20% {
+    -webkit-transform: translate(-3px, 0px) rotate(5deg);
+            transform: translate(-3px, 0px) rotate(5deg);
+  }
+  30% {
+    -webkit-transform: translate(3px, 2px) rotate(0deg);
+            transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    -webkit-transform: translate(1px, -1px) rotate(5deg);
+            transform: translate(1px, -1px) rotate(5deg);
+  }
+  50% {
+    -webkit-transform: translate(-1px, 2px) rotate(-5deg);
+            transform: translate(-1px, 2px) rotate(-5deg);
+  }
+  60% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+            transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    -webkit-transform: translate(3px, 1px) rotate(-5deg);
+            transform: translate(3px, 1px) rotate(-5deg);
+  }
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(5deg);
+            transform: translate(-1px, -1px) rotate(5deg);
+  }
+  90% {
+    -webkit-transform: translate(1px, 2px) rotate(0deg);
+            transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(1px, -2px) rotate(-5deg);
+            transform: translate(1px, -2px) rotate(-5deg);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1385,8 +1567,9 @@ footer i {
 body {
   max-width: 1260px;
   margin: 0 auto;
-  background-color: #ddd;
+  background-color: rgba(221, 221, 221, 0.1);
   color: #000;
+  overflow-x: hidden;
 }
 
 h1 {

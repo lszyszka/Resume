@@ -2,6 +2,7 @@
     width: 90%;
     margin: 0 auto;
     margin-top: 20px;
+    overflow-x: hidden;
 
     h1 {
         font-size: 28px;
@@ -11,9 +12,7 @@
         margin-top: 20px;
         display: flex;
         justify-content: center;
-
-
-
+        transition: .7s;
 
         img {
             width: 100%;
@@ -24,10 +23,36 @@
         }
     }
 
+    .one-project:nth-of-type(1) .projects-image,
+    .one-project:nth-of-type(3) .projects-image,
+    .one-project:nth-of-type(2) .project-desc {
+        transform: translateX(-100vw);
+    }
+
+    .one-project:nth-of-type(1) .project-desc,
+    .one-project:nth-of-type(3) .project-desc,
+    .one-project:nth-of-type(2) .projects-image {
+        transform: translateX(100vw);
+    }
+
+    .one-project:nth-of-type(1).active .projects-image,
+    .one-project:nth-of-type(3).active .projects-image,
+    .one-project:nth-of-type(2).active .project-desc {
+        transform: translateX(0);
+    }
+
+
+    .one-project:nth-of-type(1).active .project-desc,
+    .one-project:nth-of-type(3).active .project-desc,
+    .one-project:nth-of-type(2).active .projects-image {
+        transform: translateX(0vw);
+    }
+
 
 
     .project-desc {
 
+        transition: .7s;
 
         .project-title {
             display: flex;

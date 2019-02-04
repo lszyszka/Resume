@@ -28,12 +28,24 @@ window.addEventListener('scroll', function () {
     if (scrollPosition > thirdDivProject - window.innerHeight + 150) {
         projectDiv[2].classList.add('active');
     }
-    // let secondDivProject = projectDiv[1].offsetTop;
-    // if (scrollPosition > secondDivProject - window.innerHeight) {
-    //     projectDiv[1].classList.add('active');
-    // }
-    // let thirdDivProject = projectDiv[2].offsetTop;
-    // if (scrollPosition > thirdDivProject - window.innerHeight) {
-    //     projectDiv[2].classList.add('active');
-    // }
+    //reset animation
+    if (scrollPosition < 100) {
+        projectDiv.forEach((el) => {
+            el.classList.remove('active');
+        })
+    }
+})
+
+window.addEventListener('scroll', function () {
+    let scrollPosition = this.scrollY;
+    let elementPosition = document.querySelector('input[type=submit').offsetTop;
+    if (scrollPosition > elementPosition - window.innerHeight + 50) {
+        document.querySelector('input[type=submit').classList.add('active');
+    } else {
+        document.querySelector('input[type=submit').classList.remove('active');
+    }
+})
+
+document.querySelectorAll('li').forEach((el) => {
+    el.classList.add('active');
 })
