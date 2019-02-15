@@ -23,6 +23,7 @@
             <span></span>
             <span></span>
             <span></span>
+            <span>sdfsdf</span>
             <span></span>
         </div>
 
@@ -172,11 +173,15 @@
         </div>
         <div class="form">
             <form action="">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="tel" placeholder="Phone">
-                <textarea placeholder="Your Message" rows="5" cols="50"></textarea>
-                <input type="submit" value="Send" class="send">
+                <input type="text" class="form-name" placeholder="Name">
+                <p class="name-error"></p>
+                <input type="email" class="form-email" placeholder="Email">
+                <p class="email-error"></p>
+                <input type="tel" class="form-tel" placeholder="Phone">
+                <p class="tel-error"></p>
+                <textarea placeholder="Your Message" maxlength="256" rows="5" cols="50"></textarea>
+                <p class="msg-error"></p>
+                <input type="submit" class="form-submit" value="Send" class="send">
             </form>
         </div>
     </section>
@@ -200,6 +205,7 @@
     <script src="./js/typeText.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/scrollPage.js"></script>
+    <script src="./js/form.js"></script>
 </body>
 
 </html>

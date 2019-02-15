@@ -1283,6 +1283,11 @@ footer i {
           flex-direction: column;
 }
 
+.contact .form form p {
+  color: red;
+  font-weight: bold;
+}
+
 .contact .form form textarea {
   resize: none;
   padding: 10px 10px;
