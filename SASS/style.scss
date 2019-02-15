@@ -31,3 +31,39 @@ h1 {
         display: none;
     }
 }
+
+.backToTop {
+    position: fixed;
+    text-align: center;
+    line-height: 70px;
+    font-size: 32px;
+    right: 15px;
+    bottom: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    color: white;
+    background-color: #BC4B51;
+    transition: .3s;
+    cursor: pointer;
+    z-index: 1;
+    display: none;
+
+    &:hover {
+        background-color: #fff;
+        color: #BC4B51;
+    }
+}
+
+.backToTop.active {
+    display: block;
+}
+
+@media (max-width:768px) {
+    .backToTop.active {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        line-height: 40px;
+    }
+}

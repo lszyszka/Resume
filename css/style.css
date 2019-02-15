@@ -161,6 +161,7 @@ nav .menu li a {
   text-decoration: none;
   color: #ddd;
   text-transform: uppercase;
+  display: block;
 }
 
 nav.active {
@@ -564,8 +565,7 @@ footer div > div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 12px;
-  padding-top: 12px;
+  padding: 12px;
 }
 
 footer div > div span {
@@ -1584,6 +1584,43 @@ h1 {
 @media (max-width: 1023px) {
   .desktop-m {
     display: none;
+  }
+}
+
+.backToTop {
+  position: fixed;
+  text-align: center;
+  line-height: 70px;
+  font-size: 32px;
+  right: 15px;
+  bottom: 20px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  color: white;
+  background-color: #BC4B51;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+  z-index: 1;
+  display: none;
+}
+
+.backToTop:hover {
+  background-color: #fff;
+  color: #BC4B51;
+}
+
+.backToTop.active {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .backToTop.active {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    line-height: 40px;
   }
 }
 /*# sourceMappingURL=style.css.map */

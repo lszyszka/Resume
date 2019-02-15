@@ -49,3 +49,21 @@ window.addEventListener('scroll', function () {
 document.querySelectorAll('li').forEach((el) => {
     el.classList.add('active');
 })
+
+const backToTopBtn = document.querySelector('.backToTop');
+
+backToTopBtn.addEventListener('click', function () {
+    $('html,body').animate({
+        "scrollTop": 0
+    }, 500);
+})
+
+window.addEventListener('scroll', function () {
+    let scrollPosition = this.scrollY;
+    if (scrollPosition > 100) {
+        backToTopBtn.classList.add("active");
+    } else {
+        backToTopBtn.classList.remove("active");
+    }
+
+})
