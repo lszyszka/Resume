@@ -1606,11 +1606,6 @@ h1 {
   display: none;
 }
 
-.backToTop:hover {
-  background-color: #fff;
-  color: #BC4B51;
-}
-
 .backToTop.active {
   display: block;
 }
